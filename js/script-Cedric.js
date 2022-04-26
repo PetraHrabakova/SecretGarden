@@ -16,14 +16,14 @@ var counter =0;
 $("#butterfly").mouseenter(function(){
     counter++;
     if(counter>=10&&counter<25){
-        $('#butterfliesCaught').text(counter +" Please he has a family! Think of the children!");
+        $('#butterfliesCaught').text("Butterflies caught: "+counter +" Please he has a family! Think of the children!");
     }else if(counter>=25&&counter<50){
-        $('#butterfliesCaught').text(counter +" You truly are a monster. Will I have to guild trip you to make you stop?");
+        $('#butterfliesCaught').text("Butterflies caught: "+counter +" You truly are a monster. Will I have to guild trip you to make you stop?");
     }else if(counter>=50){
         $("#butterfly").hide();
-        $('#butterfliesCaught').text(counter +" You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
+        $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
     }else{
-        $('#butterfliesCaught').text(counter);
+        $('#butterfliesCaught').text("Butterflies caught: "+counter);
     }    
     $("#butterfly").stop(true);
     var width = $(window).width() - $(this).width();
@@ -31,5 +31,5 @@ $("#butterfly").mouseenter(function(){
     var randomHeight = Math.floor(Math.random() * height);
     var randomWidth = Math.floor(Math.random() * width);
 
-    $(this).animate({left:randomWidth},500).animate({top:randomHeight},500,function(){randomMovement("#butterfly")});
+    $(this).animate({left:randomWidth},200).animate({top:randomHeight},200,function(){randomMovement("#butterfly")});
 });
