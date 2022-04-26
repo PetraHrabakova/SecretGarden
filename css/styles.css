@@ -14,12 +14,16 @@ body {
     width: 200px;
     position: fixed;
     bottom: 20%;
-    left: 40%;
+    left: 60%;
 }
 
 
 .waterdrop {
     width: 20px;
+    position: fixed;
+    bottom: 25%;
+    left: 60%;
+
 }
 
 #net {
