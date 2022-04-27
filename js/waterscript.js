@@ -1,6 +1,40 @@
 $(document).ready(function () {
     $('.waterdrop').hide();
+    $('.flower').hide();
 });
+
+
+
+function downMovement() {
+    function loop(){
+        $('#drop1').animate({bottom:'-40', },1000,  function(){
+            loop();
+    
+        });
+        $('#drop1').animate({bottom:'154', },1000,  function(){
+            loop();
+    
+        });
+    }
+        loop();
+    }
+
+
+
+function downMovement2() {
+function loop(){
+    $('.waterdrop').animate({bottom:'-30', },900,  function(){
+        loop();
+
+    });
+    $('.waterdrop').animate({bottom:'150', },900,  function(){
+        loop();
+
+    });
+}
+    loop();
+}
+
 
 
 var toggle = 0;
@@ -13,40 +47,18 @@ $("#wateringcan").click(function () {
             }     
         });
         $(".waterdrop").show();
+        $("#drop").show();
+        $("#drop1").show();
+        $('.flower').show();
+        $('.flower1').hide();
        
+        $(".waterdrop").animate( "slow" ,function() {downMovement2(".waterdrop")});
+        $("#drop").animate( "slow" ,function() {downMovement2("#drop")});
+        $("#drop1").animate( "slow" ,function() {downMovement("#drop1")});
+        $("#talk").text("Please, please water me!I want to grow!");
+        $("#talk_dirty").text("YES, come over here and make me wet !");
 
-       /* $("#drop").animate( "slow" ,function() {downMovement(this)});
-        $(".waterdrop").animate( "slow" ,function() {downMovement(this)});
-        $("#drop3").animate( "slow" ,function() {downMovement(this)});
-
-        function downMovement(IdRef) {
-           
-            
-                $(IdRef).animate({top: "+=100"}, function(){downMovement(IdRef);});  
-            
-        }*/
-        
-        $(".waterdrop").animate( "slow" ,function() {downMovement(this)});
-        $("#drop").animate( "slow" ,function() {downMovement(this)});
-        ("#drop2").animate( "slow" ,function() {downMovement(this)});
-
-        function downMovement(IdRef) {
-         
-             function loop(){
-                 for (var start = 1, end = 3; start < $(".waterdrop").length; start += 3, end += 3){
-           $(".waterdrop")
-           .animate({bottom:-30},1000)
-           .animate({bottom:90},1000, loop);
-           
-    
-           }
-        }
-            loop();  
-        
-        }
-
-        
-        
+       
         toggle=1;
     } else {
         $("#wateringcan").animate({deg: 0}, {
@@ -55,14 +67,16 @@ $("#wateringcan").click(function () {
             }
         });
         $('.waterdrop').hide();
+        $('#drop').hide();
+        
+        
+       
         toggle=0;
+       
     }
 });
 
-//$(document).ready(function () {
-    //$('.waterdrop').hide();
-//});
-//$('#fade').slideDown("slow");
+
 
 
 

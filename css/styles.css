@@ -20,11 +20,70 @@ body {
 
 .waterdrop {
     width: 20px;
+    position: fixed;
+    bottom: 25%;
+    left: 45%;
+    z-index: 2;
+
+}
+#drop {
+    width: 20px;
+    position: absolute;
+    bottom: 23%;
+    left: 45%;
+    z-index: 2;
+
+}
+#drop1 {
+    width: 20px;
     position: absolute;
     bottom: 25%;
     left: 45%;
     z-index: 2;
 
+}
+#talk{
+    border-style: dotted;
+    background-color: aliceblue;
+    padding: 10px;
+    position: fixed;
+    bottom: 100px;
+    left: 65%;   
+    font-size: large;
+    color: rgb(129, 18, 18);
+    font-weight: bold;
+}
+#talk_dirty{
+    border-style: dotted;
+    background-color: aliceblue;
+    padding: 10px;
+    position: fixed;
+    bottom: 100px;
+    left: 20%;   
+    font-size: large;
+    color: rgb(129, 18, 18);
+    font-weight: bold;  
+}
+
+
+
+.flower{
+    width: 200px;
+    position: fixed;
+    bottom: 20px;
+    left: 35%;  
+}
+.flower_small{
+    width: 100px;
+    position: fixed;
+    bottom: 20px;
+    left: 65%; 
+}
+.flower1{
+    width: 120px;
+    position: fixed;
+    bottom: 20px;
+    left: 35%;  
 }
 
 
