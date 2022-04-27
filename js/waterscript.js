@@ -10,9 +10,10 @@ $("#wateringcan").click(function () {
             step: function (now) {
                 $(this).css({transform: 'rotate(' + now + 'deg)'});
 
-            }
-            
+            }     
         });
+        $('.waterdrop').show();
+       
         toggle=1;
     } else {
         $("#wateringcan").animate({deg: 0}, {
@@ -20,14 +21,17 @@ $("#wateringcan").click(function () {
                 $(this).css({transform: 'rotate(' + now + 'deg)'});
             }
         });
+        $('.waterdrop').hide();
         toggle=0;
     }
 });
 
-$("#wateringcan").click(function () {
-
-$('.waterdrop').show();
+$(document).ready(function () {
+    $('.waterdrop').hide();
 });
+$('#fade').slideDown("slow");
+
+
 
 
 

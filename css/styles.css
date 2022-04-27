@@ -20,7 +20,7 @@ body {
 
 .waterdrop {
     width: 20px;
-    position: fixed;
+    position: absolute;
     bottom: 25%;
     left: 60%;
 
