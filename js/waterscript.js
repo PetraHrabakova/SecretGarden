@@ -8,11 +8,11 @@ $(document).ready(function () {
 
 function downMovement() {
     function loop(){
-        $('#drop1').animate({bottom:'-40', },1000,  function(){
+        $('#drop1').animate({bottom:'-40', },500,  function(){
             loop();
     
         });
-        $('#drop1').animate({bottom:'154', },1000,  function(){
+        $('#drop1').animate({bottom:'100', },500,  function(){
             loop();
     
         });
@@ -24,11 +24,11 @@ function downMovement() {
 
 function downMovement2() {
 function loop(){
-    $('.waterdrop').animate({bottom:'-30', },900,  function(){
+    $('.waterdrop').animate({bottom:'-30', },1000,  function(){
         loop();
 
     });
-    $('.waterdrop').animate({bottom:'150', },900,  function(){
+    $('.waterdrop').animate({bottom:'150', },500,  function(){
         loop();
 
     });
@@ -53,9 +53,10 @@ $("#wateringcan").click(function () {
         $('.flower').show();
         $('.flower1').hide();
        
-        $(".waterdrop").animate( "slow" ,function() {downMovement2(".waterdrop")});
-        $("#drop").animate( "slow" ,function() {downMovement2("#drop")});
-        $("#drop1").animate( "slow" ,function() {downMovement("#drop1")});
+        $(".waterdrop").animate( "fast" ,function() {downMovement2(".waterdrop")});
+        $("#drop").animate( "fast" ,function() {downMovement2("#drop")});
+        $("#drop1").animate( "fast" ,function() {downMovement("#drop1")});
+        
         $("#talk").text("Please, please water me!I want to grow!");
         $("#talk_dirty").text("YES, come over here and make me wet !");
 
