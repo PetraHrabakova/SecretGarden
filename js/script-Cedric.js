@@ -18,7 +18,7 @@ $("#butterfly").mouseenter(function(){
     if(counter>=10&&counter<25){
         $('#butterfliesCaught').text("Butterflies caught: "+counter +" Please he has a family! Think of the children!");
     }else if(counter>=25&&counter<50){
-        $('#butterfliesCaught').text("Butterflies caught: "+counter +" You truly are a monster. Will I have to guild trip you to make you stop?");
+        $('#butterfliesCaught').text("Butterflies caught: "+counter +" You truly are a monster. Will I have to guilt trip you to make you stop?");
     }else if(counter>=50){
         $("#butterfly").hide();
         $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
