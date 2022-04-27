@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('.waterdrop').hide();
     $('.flower').hide();
+    $('.verysmall').hide();
 });
 
 

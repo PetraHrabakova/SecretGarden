@@ -24,8 +24,9 @@ $("#butterfly").mouseenter(function(){
         $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
         //Veronica added this to make the game more dramatic
         //When the butterfly dies, the flower dies with him
-        $("#talk").text("You are heartless, I will die now, goodbye Papp the butterfly");
+        $("#talk").text("You are heartless, I will die now (just kidding), goodbye Papp the butterfly");
         $(".flower_small").hide();
+        $('.verysmall').show();
     }else{
         $('#butterfliesCaught').text("Butterflies caught: "+counter);
     }    
