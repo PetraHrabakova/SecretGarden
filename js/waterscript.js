@@ -68,6 +68,8 @@ $("#wateringcan").click(function () {
         });
         $('.waterdrop').hide();
         $('#drop').hide();
+        $("#talk_dirty").hide();
+
         
         
        
