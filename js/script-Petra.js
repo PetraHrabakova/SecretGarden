@@ -1,8 +1,5 @@
 // Net
-
-
 var oldX = 0;
-
 
 $(document).mousemove(function(e) {
     $("#net").css({

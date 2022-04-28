@@ -1,37 +1,30 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $('.waterdrop').hide();
 });
 
 
 var toggle = 0;
-$("#wateringcan").click(function () {
-    if (toggle==0) {
-        $("#wateringcan").animate({deg: -45}, {
-            step: function (now) {
-                $(this).css({transform: 'rotate(' + now + 'deg)'});
+$("#wateringcan").click(function() {
+    if (toggle == 0) {
+        $("#wateringcan").animate({ deg: -45 }, {
+            step: function(now) {
+                $(this).css({ transform: 'rotate(' + now + 'deg)' });
 
             }
-            
+
         });
-        toggle=1;
+        toggle = 1;
     } else {
-        $("#wateringcan").animate({deg: 0}, {
-            step: function (now) {
-                $(this).css({transform: 'rotate(' + now + 'deg)'});
+        $("#wateringcan").animate({ deg: 0 }, {
+            step: function(now) {
+                $(this).css({ transform: 'rotate(' + now + 'deg)' });
             }
         });
-        toggle=0;
+        toggle = 0;
     }
 });
 
-$("#wateringcan").click(function () {
+$("#wateringcan").click(function() {
 
-$('.waterdrop').show();
+    $('.waterdrop').show();
 });
-
-
-
-
-
-
-
