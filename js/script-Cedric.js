@@ -18,14 +18,20 @@ $("#butterfly").mouseenter(function(){
     if(counter>=10&&counter<25){
         $('#butterfliesCaught').text("Butterflies caught: "+counter +" Please he has a family! Think of the children!");
     }else if(counter>=25&&counter<50){
-        $('#butterfliesCaught').text("Butterflies caught: "+counter +" You truly are a monster. Will I have to guild trip you to make you stop?");
+        $('#butterfliesCaught').text("Butterflies caught: "+counter +" You truly are a monster. Will I have to guilt trip you to make you stop?");
     }else if(counter>=50){
         $("#butterfly").hide();
         $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
+        //Veronica added this to make the game more dramatic
+        //When the butterfly dies, the flower dies with him
+        $("#talk").text("You are heartless, I will die now (just kidding), goodbye Papp the butterfly");
+        $(".flower_small").hide();
+        $('.verysmall').show();
     }else{
         $('#butterfliesCaught').text("Butterflies caught: "+counter);
     }    
     $("#butterfly").stop(true);
+    
     var width = $(window).width() - $(this).width();
     var height = $(window).height() - $(this).height();
     var randomHeight = Math.floor(Math.random() * height);
