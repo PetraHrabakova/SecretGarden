@@ -2,6 +2,8 @@ $(document).ready(function() {
     $('.waterdrop').hide();
     $('.flower').hide();
     $('.verysmall').hide();
+    $('#squirel').hide();
+    $('#talk_sq').hide();
 });
 
 

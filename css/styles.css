@@ -64,6 +64,19 @@ body {
     color: rgb(129, 18, 18);
     font-weight: bold;  
 }
+#talk_sq{
+
+    border-style: dotted;
+    background-color: aliceblue;
+    padding: 10px;
+    position: fixed;
+    bottom: 55%;
+    left: 70%;   
+    font-size: large;
+    color: rgb(129, 18, 18);
+    font-weight: bold;  
+
+}
 
 
 
@@ -102,15 +115,25 @@ body {
 }
 
 .apple {
+   
     height: 50px;
     width: auto;
     position: absolute;
+}
+
+#squirel{
+    width: 150px;
+    position: fixed;
+    left: 79%;
+    bottom: 55%;
+    z-index: 1;
 }
 
 #tree {
     position: fixed;
     bottom: 20px;
     left: 50%;
+    z-index: -1;
 
 }
 
