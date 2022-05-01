@@ -3,7 +3,6 @@ body {
     height: 100%;
 }
 
-
 #butterfly {
     height: 200px;
     width: auto;
@@ -17,111 +16,107 @@ body {
     left: 45%;
 }
 
-
 .waterdrop {
     width: 20px;
     position: fixed;
     bottom: 25%;
     left: 45%;
     z-index: 2;
-
 }
+
 #drop {
     width: 20px;
     position: absolute;
     bottom: 23%;
     left: 45%;
     z-index: 2;
-
 }
+
 #drop1 {
     width: 20px;
     position: absolute;
     bottom: 25%;
     left: 45%;
     z-index: 2;
-
 }
-#talk{
+
+#talk {
     border-style: dotted;
     background-color: aliceblue;
     padding: 10px;
     position: fixed;
     bottom: 100px;
-    left: 65%;   
+    left: 65%;
     font-size: large;
     color: rgb(129, 18, 18);
     font-weight: bold;
 }
-#talk_dirty{
+
+#talk_dirty {
     border-style: dotted;
     background-color: aliceblue;
     padding: 10px;
     position: fixed;
     bottom: 100px;
-    left: 20%;   
+    left: 20%;
     font-size: large;
     color: rgb(129, 18, 18);
-    font-weight: bold;  
+    font-weight: bold;
 }
-#talk_sq{
 
+#talk_sq {
     border-style: dotted;
     background-color: aliceblue;
     padding: 10px;
     position: fixed;
     bottom: 55%;
-    left: 70%;   
+    left: 70%;
     font-size: large;
     color: rgb(129, 18, 18);
-    font-weight: bold;  
-
+    font-weight: bold;
 }
 
-
-
-.flower{
+.flower {
     width: 200px;
     position: fixed;
     bottom: 20px;
-    left: 35%;  
+    left: 35%;
 }
-.flower_small{
+
+.flower_small {
     width: 100px;
     position: fixed;
     bottom: 20px;
-    left: 65%; 
+    left: 65%;
 }
-.verysmall{
+
+.verysmall {
     width: 50px;
     position: fixed;
     bottom: 20px;
     left: 65%;
 }
-.flower1{
+
+.flower1 {
     width: 120px;
     position: fixed;
     bottom: 20px;
-    left: 35%;  
+    left: 35%;
 }
-
-
 
 #net {
     height: 600px;
     width: auto;
     position: absolute;
-
 }
 
 .apple {
-   
     height: 50px;
     width: auto;
     position: absolute;
 }
 
-#squirel{
+#squirel {
     width: 150px;
     position: fixed;
     left: 79%;
@@ -134,7 +129,6 @@ body {
     bottom: 20px;
     left: 50%;
     z-index: -1;
-
 }
 
 .basket {
@@ -142,9 +136,7 @@ body {
     position: fixed;
     bottom: 20px;
     left: 5%;
-
 }
-
 
 body {
     margin: 0px;
@@ -153,4 +145,29 @@ body {
     background-repeat: repeat-x;
     background-position: bottom;
     overflow: hidden;
+}
+
+
+/* Petra styles */
+
+.butterfly_baby {
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#baby_talking {
+    width: 70%;
+    height: 110%;
+    display: block;
+    background: bisque;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin-top: -65px;
+    margin-left: -150px;
+    padding: 10px;
+    font-size: x-large;
+    color: rgb(129, 18, 18);
+    font-weight: bold;
 }
