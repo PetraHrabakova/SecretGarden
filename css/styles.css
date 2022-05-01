@@ -115,7 +115,31 @@ body {
     width: auto;
     position: absolute;
 }
+#apple1 {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    z-index: 2;
+} 
 
+ #apple2 {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    z-index: 2;
+}
+
+#apple3 {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    z-index: 2;
+}
+
+
+#apple3:hover {
+    cursor: pointer;
+}
 #squirel {
     width: 150px;
     position: fixed;
@@ -129,13 +153,25 @@ body {
     bottom: 20px;
     left: 50%;
     z-index: -1;
+
 }
+#tree:hover {
+    cursor: pointer;
+    
+
+}
+
+
 
 .basket {
     width: 200px;
     position: fixed;
     bottom: 20px;
     left: 5%;
+    z-index: 1;
+}
+#basketfront{
+    z-index: 3;
 }
 
 body {
