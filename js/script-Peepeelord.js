@@ -120,15 +120,13 @@ $(document).ready(function () {
 
 
 
-/*$(document).ready(function () {
-    //const audio = new Audio("images/whistle.mp3");
+$(document).ready(function () {
+    const audio = new Audio("images/whistle.mp3");
     $("#tree").click(function () {
-        //audio.play();
-
-        alert("Haszontalan gennyes fereg korcsok")
+        audio.play();
 
 
-        /*if ($("#apple1").offset().left > getBasketPos().top) {
+        if ($("#apple1").offset().left > getBasketPos().top) {
             $("#apple1").animate({ top: $('#tree').height() }, 9000);
 
 
@@ -142,4 +140,4 @@ $(document).ready(function () {
 
         }
     });
-});*/
+});
