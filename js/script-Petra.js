@@ -1,4 +1,6 @@
 // Net
+// Petra made the net to follow the mouse cursor as well as to turn 
+// base on the cursor's direction
 var oldX = 0;
 
 $(document).mousemove(function(e) {
