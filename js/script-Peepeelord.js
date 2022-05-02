@@ -38,7 +38,7 @@ $(document).ready(function() {
         left: X1,
         top: Y1
     }, 1);
-    console.log(Y1,)
+    console.log(Y1, )
 
     let X2 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y2 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
@@ -47,7 +47,7 @@ $(document).ready(function() {
         top: Y2
     }, 1);
 
-    console.log(Y2,)
+    console.log(Y2, )
     let X3 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y3 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple3").animate({
@@ -63,55 +63,54 @@ $(document).ready(function() {
 
 
 
-    $("#apple1").click(function () {
+$("#apple1").click(function() {
 
-        $("#apple1").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 20,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
- });
-
-
-    $("#apple2").click(function () {
-
-        $("#apple2").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 2.75,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
-
-    $("#apple3").click(function () {
-        $("#apple3").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 1.5,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
+    $("#apple1").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 20,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
 
+$("#apple2").click(function() {
+
+    $("#apple2").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 2.75,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
+
+$("#apple3").click(function() {
+    $("#apple3").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 1.5,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
 
-    $("#tree").click(function () {
-        audio.play();
 
 
-        if ($("#apple1").offset().left > getBasketPos().top) {
-            $("#apple1").animate({ top: $('#tree').height() }, 9000);
+$("#tree").click(function() {
+    audio.play();
 
 
-        }
-        if ($("#apple2").offset().left > getBasketPos().top) {
-            $("#apple2").animate({ top: $('#tree').height() }, 9000);
+    if ($("#apple1").offset().left > getBasketPos().top) {
+        $("#apple1").animate({ top: $('#tree').height() }, 9000);
 
-        }
-        if ($("#apple3").offset().left > getBasketPos().top) {
-            $("#apple3").animate({ top: $('#tree').height() }, 9000);
 
-        }
-    });
+    }
+    if ($("#apple2").offset().left > getBasketPos().top) {
+        $("#apple2").animate({ top: $('#tree').height() }, 9000);
 
+    }
+    if ($("#apple3").offset().left > getBasketPos().top) {
+        $("#apple3").animate({ top: $('#tree').height() }, 9000);
+
+    }
+});

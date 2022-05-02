@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('#baby11').hide();
     $('#baby12').hide();
 
-//Veronica hid all these
+    //Veronica hid all these
     $('.waterdrop').hide();
     $('.flower').hide();
     $('.verysmall').hide();
@@ -77,8 +77,8 @@ $(document).mousemove(function(e) {
 
 //Cedric added function for random movements
 function randomMovement(IdRef) {
-    var width = $(window).width() - $(IdRef).width(); 
-    var height = $(window).height() - $(IdRef).height(); 
+    var width = $(window).width() - $(IdRef).width();
+    var height = $(window).height() - $(IdRef).height();
     var randomVertical = Math.random() * height;
     var randomHorizontal = Math.random() * width;
     $(IdRef).animate({ top: randomVertical }, 5000).animate({ left: randomHorizontal }, 5000, function() { randomMovement(IdRef) });
@@ -104,10 +104,10 @@ function flyAway(element) {
     setTimeout(function() { $(element).hide() }, 8000);
 }
 
-//Cedric added functionality that keeps track of butterflies being caught as well as some added text.
+//Cedric added functionality that keeps track of butterflies being caught as well as some added text upon catching the butterfly a certain amount of times.
 var counter = 0;
 $("#butterfly").mouseenter(function() {
-    counter++;
+    counter++;//
     if (counter >= 10 && counter < 25) {
         $('#butterfliesCaught').html("Butterflies caught: " + counter + " Please he has a family! Think of the children!");
         //Special function by Veronica, when butterfly is caught 10 times, the squirell & text appears
@@ -117,12 +117,13 @@ $("#butterfly").mouseenter(function() {
 
     } else if (counter >= 25 && counter < 50) {
         $('#butterfliesCaught').html("Butterflies caught: " + counter + " You truly are a monster. Will I have to guilt trip you to make you stop?");
-         //here the squirell's text  hides
+        //here the squirell's text  hides
         $('#talk_sq').hide();
     } else if (counter >= 50) {
+        //Cedric added the butterfly "dying" when caught 50 times.
         $("#butterfly").hide();
         $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
-         //Veronica added this to make the game more dramatic
+        //Veronica added this to make the game more dramatic
         //When the butterfly dies, the flower gets smaller, it's a special function
         $("#talk").text("You are heartless, I will die now (just kidding), goodbye Papp the butterfly");
         $(".flower_small").hide();
@@ -232,23 +233,23 @@ $("#wateringcan").click(function() {
             }
 
         });
-//when the watering can is tilted, the drops appear
+        //when the watering can is tilted, the drops appear
         $(".waterdrop").show();
         $("#drop").show();
         $("#drop1").show();
         //Special function where a flower grows when it's watered
         $('.flower').show();
         $('.flower1').hide();
-//animating the waterdrops by calling the funtions when the watering can is tilted
+        //animating the waterdrops by calling the funtions when the watering can is tilted
         $(".waterdrop").animate("fast", function() { downMovement2(".waterdrop") });
         $("#drop").animate("fast", function() { downMovement2("#drop") });
         $("#drop1").animate("fast", function() { downMovement("#drop1") });
-        //$("#drop2").animate("fast", function() { downMovement("#drop2") });
-//also text changes when the can is tilted
+        
+        //also text changes when the can is tilted
         $("#talk").text("Please, please water me!I want to grow!");
         $("#talk_dirty").text("YES, come over here and make me wet !");
 
-//here the watering can become untilted
+        //here the watering can become untilted
         toggle = 1;
     } else {
         $("#wateringcan").animate({ deg: 0 }, {
@@ -256,7 +257,7 @@ $("#wateringcan").click(function() {
                 $(this).css({ transform: 'rotate(' + now + 'deg)' });
             }
         });
-//when the watering can is not tilted these elements are hidden
+        //when the watering can is not tilted these elements are hidden
         $('.waterdrop').hide();
         $('#drop').hide();
         $("#talk_dirty").hide();
@@ -269,6 +270,7 @@ $("#wateringcan").click(function() {
     }
 });
 
+<<<<<<< HEAD
 //Veronicas part is done here
 
 //Papp's part
@@ -366,3 +368,6 @@ function getBasketPos() {
 
 
 
+=======
+//Veronicas part is done here
+>>>>>>> f4be540bc76ca060454cacaa3e63555cb2e1d623
