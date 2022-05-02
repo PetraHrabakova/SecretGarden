@@ -1,3 +1,4 @@
+
 html,
 body {
     height: 100%;
@@ -8,19 +9,20 @@ body {
     width: auto;
     position: absolute;
 }
-
+/*Veronica did this styles*/
+/*the watering can functionality &position*/
 #wateringcan {
     width: 200px;
     position: fixed;
     bottom: 20%;
-    left: 45%;
+    left: 55%;
 }
 
 .waterdrop {
     width: 20px;
     position: fixed;
     bottom: 25%;
-    left: 45%;
+    left: 55%;
     z-index: 2;
 }
 
@@ -28,7 +30,7 @@ body {
     width: 20px;
     position: absolute;
     bottom: 23%;
-    left: 45%;
+    left: 55%;
     z-index: 2;
 }
 
@@ -36,17 +38,17 @@ body {
     width: 20px;
     position: absolute;
     bottom: 25%;
-    left: 45%;
+    left: 55%;
     z-index: 2;
 }
-
+/*text position*/
 #talk {
     border-style: dotted;
     background-color: aliceblue;
     padding: 10px;
     position: fixed;
-    bottom: 100px;
-    left: 65%;
+    bottom: 50px;
+    left: 25%;
     font-size: large;
     color: rgb(129, 18, 18);
     font-weight: bold;
@@ -57,8 +59,8 @@ body {
     background-color: aliceblue;
     padding: 10px;
     position: fixed;
-    bottom: 100px;
-    left: 20%;
+    bottom: 200px;
+    left: 30%;
     font-size: large;
     color: rgb(129, 18, 18);
     font-weight: bold;
@@ -70,12 +72,12 @@ body {
     padding: 10px;
     position: fixed;
     bottom: 55%;
-    left: 70%;
+    right: 75%;
     font-size: large;
     color: rgb(129, 18, 18);
     font-weight: bold;
 }
-
+/*styles for flowers*/
 .flower {
     width: 200px;
     position: fixed;
@@ -87,14 +89,15 @@ body {
     width: 100px;
     position: fixed;
     bottom: 20px;
-    left: 65%;
+    left: 20%;
+    
 }
 
 .verysmall {
     width: 50px;
     position: fixed;
     bottom: 20px;
-    left: 65%;
+    left: 20%;
 }
 
 .flower1 {
@@ -103,6 +106,23 @@ body {
     bottom: 20px;
     left: 35%;
 }
+/*new tree & squirell position*/
+#squirel {
+    width: 150px;
+    position: fixed;
+    right: 82%;
+    bottom: 45%;
+    z-index: 1;
+}
+#small_tree {
+    width: 700px;
+    position: fixed;
+    bottom: 20px;
+    right: 70%;
+    z-index: -1;
+
+}
+/*until here*/
 
 #net {
     height: 600px;
@@ -140,13 +160,7 @@ body {
 #apple3:hover {
     cursor: pointer;
 }
-#squirel {
-    width: 150px;
-    position: fixed;
-    left: 79%;
-    bottom: 55%;
-    z-index: 1;
-}
+
 
 #tree {
     position: fixed;
@@ -155,11 +169,15 @@ body {
     z-index: -1;
 
 }
+
+
 #tree:hover {
     cursor: pointer;
     
 
 }
+
+
 
 
 
