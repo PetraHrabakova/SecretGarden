@@ -103,6 +103,7 @@ body {
     font-size: large;
     color: rgb(129, 18, 18);
     font-weight: bold;
+    z-index: 2;
 }
 
 
@@ -144,6 +145,7 @@ body {
     position: fixed;
     right: 82%;
     bottom: 45%;
+    z-index: 2;
 }
 
 #small_tree {
@@ -185,6 +187,17 @@ body {
 }
 
 #apple3:hover {
+    cursor: pointer;
+}
+
+#tree {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    z-index: 1;
+}
+
+#tree:hover {
     cursor: pointer;
 }
 

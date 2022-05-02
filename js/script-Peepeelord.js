@@ -28,11 +28,10 @@ function getBasketPos() {
     return { top: basketTop, left: basketLeft, bottom: basketBottom, right: basketRight }
 }
 
-
-
-
 $(document).ready(function() {
-
+   
+    //Papp did this
+    
     let X1 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y1 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple1").animate({
@@ -55,8 +54,14 @@ $(document).ready(function() {
         left: X3,
         top: Y3
     }, 1);
-    console.log(Y3, )
-})
+    console.log(Y3,)
+});
+
+
+
+
+
+
 
 $("#apple1").click(function() {
 

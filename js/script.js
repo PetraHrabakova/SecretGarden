@@ -26,6 +26,32 @@ $(document).ready(function() {
     $('.verysmall').hide();
     $('#squirel').hide();
     $('#talk_sq').hide();
+
+    //Papp did this
+    
+    let X1 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
+    let Y1 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
+    $("#apple1").animate({
+        left: X1,
+        top: Y1
+    }, 1);
+    console.log(Y1,)
+
+    let X2 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
+    let Y2 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
+    $("#apple2").animate({
+        left: X2,
+        top: Y2
+    }, 1);
+
+    console.log(Y2,)
+    let X3 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
+    let Y3 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
+    $("#apple3").animate({
+        left: X3,
+        top: Y3
+    }, 1);
+    console.log(Y3,)
 });
 
 
@@ -78,10 +104,10 @@ function flyAway(element) {
     setTimeout(function() { $(element).hide() }, 8000);
 }
 
-//Cedric added functionality that keeps track of butterflies being caught as well as some added text.
+//Cedric added functionality that keeps track of butterflies being caught as well as some added text upon catching the butterfly a certain amount of times.
 var counter = 0;
 $("#butterfly").mouseenter(function() {
-    counter++;
+    counter++;//
     if (counter >= 10 && counter < 25) {
         $('#butterfliesCaught').html("Butterflies caught: " + counter + " Please he has a family! Think of the children!");
         //Special function by Veronica, when butterfly is caught 10 times, the squirell & text appears
@@ -94,6 +120,7 @@ $("#butterfly").mouseenter(function() {
         //here the squirell's text  hides
         $('#talk_sq').hide();
     } else if (counter >= 50) {
+        //Cedric added the butterfly "dying" when caught 50 times.
         $("#butterfly").hide();
         $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
         //Veronica added this to make the game more dramatic
@@ -217,7 +244,7 @@ $("#wateringcan").click(function() {
         $(".waterdrop").animate("fast", function() { downMovement2(".waterdrop") });
         $("#drop").animate("fast", function() { downMovement2("#drop") });
         $("#drop1").animate("fast", function() { downMovement("#drop1") });
-        //        $("#drop2").animate("fast", function() { downMovement("#drop2") });
+        
         //also text changes when the can is tilted
         $("#talk").text("Please, please water me!I want to grow!");
         $("#talk_dirty").text("YES, come over here and make me wet !");
@@ -244,3 +271,99 @@ $("#wateringcan").click(function() {
 });
 
 //Veronicas part is done here
+
+//Papp's part
+
+let boxWidthX1 = (getTreePos().right - getTreePos().left) * 0.1067 + getTreePos().left
+let boxWidthX2 = (getTreePos().right - getTreePos().left) * 0.884 + getTreePos().left
+let boxHeightY1 = (getTreePos().bottom - getTreePos().top) * 0.1425 + getTreePos().top
+let boxHeightY2 = (getTreePos().bottom - getTreePos().top) * 0.425 + getTreePos().top
+
+const audio = new Audio("images/whistle.mp3");
+
+
+function getTreePos() {
+    var treeTop = $('#tree').offset().top
+    var treeLeft = $('#tree').offset().left
+    var treeBottom = $('#tree').offset().top + $('#tree').height()
+    var treeRight = $('#tree').offset().left + $('#tree').width()
+
+
+    return { top: treeTop, left: treeLeft, bottom: treeBottom, right: treeRight }
+}
+
+function getBasketPos() {
+    var basketTop = $('.basket').offset().top
+    var basketLeft = $('.basket').offset().left
+    var basketBottom = $('.basket').offset().top + $('.basket').height()
+    var basketRight = $('.basket').offset().left + $('.basket').width()
+
+
+    return { top: basketTop, left: basketLeft, bottom: basketBottom, right: basketRight }
+}
+
+
+
+
+
+
+
+    $("#apple1").click(function () {
+
+        $("#apple1").animate({
+            left: getBasketPos().left
+                + (getBasketPos().right - getBasketPos().left) / 20,
+            top: getBasketPos().top
+                + (getBasketPos().bottom - getBasketPos().top) / 1.75
+        }, 1000);
+ });
+
+
+    $("#apple2").click(function () {
+
+        $("#apple2").animate({
+            left: getBasketPos().left
+                + (getBasketPos().right - getBasketPos().left) / 2.75,
+            top: getBasketPos().top
+                + (getBasketPos().bottom - getBasketPos().top) / 1.75
+        }, 1000);
+    });
+
+    $("#apple3").click(function () {
+        $("#apple3").animate({
+            left: getBasketPos().left
+                + (getBasketPos().right - getBasketPos().left) / 1.5,
+            top: getBasketPos().top
+                + (getBasketPos().bottom - getBasketPos().top) / 1.75
+        }, 1000);
+    });
+
+
+
+
+    $("#tree").click(function () {
+        audio.play();
+
+
+        if ($("#apple1").offset().left > getBasketPos().top) {
+            $("#apple1").animate({ top: $('#tree').height() }, 9000);
+
+
+        }
+        if ($("#apple2").offset().left > getBasketPos().top) {
+            $("#apple2").animate({ top: $('#tree').height() }, 9000);
+
+        }
+        if ($("#apple3").offset().left > getBasketPos().top) {
+            $("#apple3").animate({ top: $('#tree').height() }, 9000);
+
+        }
+    });
+
+
+
+
+
+
+
+
