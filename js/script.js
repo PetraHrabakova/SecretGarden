@@ -104,7 +104,7 @@ function flyAway(element) {
     setTimeout(function() { $(element).hide() }, 8000);
 }
 
-//Cedric added functionality that keeps track of butterflies being caught as well as some added text upon catching the butterfly a certain amount of times.
+//Cedric added extra functionality that keeps track of butterflies being caught as well as some added text upon catching the butterfly a certain amount of times.
 var counter = 0;
 $("#butterfly").mouseenter(function() {
     counter++; //
