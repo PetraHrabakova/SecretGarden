@@ -223,7 +223,7 @@ body {
 }
 
 
-/* Petra styles */
+/* Petra styles for EXTRA functionality */
 
 .butterfly_baby {
     height: 75px;
@@ -233,7 +233,7 @@ body {
     z-index: 5;
 }
 
-#baby_talking {
+.baby_talking {
     width: 70%;
     height: 110%;
     display: block;
