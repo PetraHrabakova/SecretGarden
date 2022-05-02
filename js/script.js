@@ -270,7 +270,6 @@ $("#wateringcan").click(function() {
     }
 });
 
-<<<<<<< HEAD
 //Veronicas part is done here
 
 //Papp's part
@@ -368,6 +367,3 @@ function getBasketPos() {
 
 
 
-=======
-//Veronicas part is done here
->>>>>>> f4be540bc76ca060454cacaa3e63555cb2e1d623
