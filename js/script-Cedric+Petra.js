@@ -2,6 +2,8 @@
 $(document).ready(function() {
     // Call to function
     randomMovement("#butterfly");
+    $('#butterfliesCaught').text("Butterflies caught: 0").css({ "font-weight": "bold", "font-size": "x-large", "font-family": "Calibri", "margin-left": "30px" });
+
 
     // Petra hid all baby butterflies
     $('#baby1').hide();
@@ -52,13 +54,13 @@ var counter = 0;
 $("#butterfly").mouseenter(function() {
     counter++;
     if (counter >= 10 && counter < 25) {
-        $('#butterfliesCaught').text("Butterflies caught: " + counter + " Please he has a family! Think of the children!");
+        $('#butterfliesCaught').html("Butterflies caught: " + counter + " Please he has a family! Think of the children!");
         $('#squirel').show();
         $('#talk_sq').show();
 
 
     } else if (counter >= 25 && counter < 50) {
-        $('#butterfliesCaught').text("Butterflies caught: " + counter + " You truly are a monster. Will I have to guilt trip you to make you stop?");
+        $('#butterfliesCaught').html("Butterflies caught: " + counter + " You truly are a monster. Will I have to guilt trip you to make you stop?");
         $('#talk_sq').hide();
     } else if (counter >= 50) {
         $("#butterfly").hide();
@@ -118,7 +120,7 @@ $("#butterfly").mouseenter(function() {
         }, 10000);
 
     } else {
-        $('#butterfliesCaught').text("Butterflies caught: " + counter);
+        $('#butterfliesCaught').text("Butterflies caught: " + counter).css({ "font-weight": "bold", "font-size": "x-large", "font-family": "Calibri", "margin-left": "30px" });
     }
     $("#butterfly").stop(true);
 
