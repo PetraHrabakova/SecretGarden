@@ -5,6 +5,8 @@ let boxWidthX2 = (getTreePos().right - getTreePos().left) * 0.884 + getTreePos()
 let boxHeightY1 = (getTreePos().bottom - getTreePos().top) * 0.1425 + getTreePos().top
 let boxHeightY2 = (getTreePos().bottom - getTreePos().top) * 0.425 + getTreePos().top
 
+const audio = new Audio("images/whistle.mp3");
+
 
 function getTreePos() {
     var treeTop = $('#tree').offset().top
@@ -31,97 +33,79 @@ function getBasketPos() {
 
 $(document).ready(function() {
 
-    let X = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
+    let X1 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y1 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple1").animate({
-        left: X,
+        left: X1,
         top: Y1
     }, 1);
     console.log(Y1, )
-})
 
-$(document).ready(function() {
-
-    let X = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
+    let X2 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y2 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple2").animate({
-        left: X,
+        left: X2,
         top: Y2
     }, 1);
 
     console.log(Y2, )
-
-})
-
-$(document).ready(function() {
-
-    let X = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
+    let X3 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y3 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple3").animate({
-        left: X,
+        left: X3,
         top: Y3
     }, 1);
     console.log(Y3, )
-
 })
 
-$(document).ready(function() {
-    $("#apple1").click(function() {
+$("#apple1").click(function() {
 
-        $("#apple1").animate({
-            left: getBasketPos().left +
-                (getBasketPos().right - getBasketPos().left) / 20,
-            top: getBasketPos().top +
-                (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
-})
+    $("#apple1").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 20,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
-$(document).ready(function() {
-    $("#apple2").click(function() {
 
-        $("#apple2").animate({
-            left: getBasketPos().left +
-                (getBasketPos().right - getBasketPos().left) / 2.75,
-            top: getBasketPos().top +
-                (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
-})
+$("#apple2").click(function() {
 
-$(document).ready(function() {
-    $("#apple3").click(function() {
-        $("#apple3").animate({
-            left: getBasketPos().left +
-                (getBasketPos().right - getBasketPos().left) / 1.5,
-            top: getBasketPos().top +
-                (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
-})
+    $("#apple2").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 2.75,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
+
+$("#apple3").click(function() {
+    $("#apple3").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 1.5,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
 
 
 
-
-$(document).ready(function() {
-    const audio = new Audio("images/whistle.mp3");
-    $("#tree").click(function() {
-        audio.play();
+$("#tree").click(function() {
+    audio.play();
 
 
-        if ($("#apple1").offset().left > getBasketPos().top) {
-            $("#apple1").animate({ top: $('#tree').height() }, 9000);
+    if ($("#apple1").offset().left > getBasketPos().top) {
+        $("#apple1").animate({ top: $('#tree').height() }, 9000);
 
 
-        }
-        if ($("#apple2").offset().left > getBasketPos().top) {
-            $("#apple2").animate({ top: $('#tree').height() }, 9000);
+    }
+    if ($("#apple2").offset().left > getBasketPos().top) {
+        $("#apple2").animate({ top: $('#tree').height() }, 9000);
 
-        }
-        if ($("#apple3").offset().left > getBasketPos().top) {
-            $("#apple3").animate({ top: $('#tree').height() }, 9000);
+    }
+    if ($("#apple3").offset().left > getBasketPos().top) {
+        $("#apple3").animate({ top: $('#tree').height() }, 9000);
 
-        }
-    });
+    }
 });
