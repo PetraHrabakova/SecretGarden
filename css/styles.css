@@ -28,7 +28,7 @@ body {
     position: fixed;
     bottom: 20%;
     left: 55%;
-    z-index: 1;
+    z-index: 3;
 }
 
 #tree {
@@ -38,12 +38,16 @@ body {
     z-index: 1;
 }
 
+#tree:hover {
+    cursor: pointer;
+}
+
 .waterdrop {
     width: 20px;
     position: fixed;
     bottom: 25%;
     left: 55%;
-    z-index: 2;
+    z-index: 4;
 }
 
 #drop {
@@ -51,7 +55,7 @@ body {
     position: absolute;
     bottom: 23%;
     left: 55%;
-    z-index: 2;
+    z-index: 4;
 }
 
 #drop1 {
@@ -59,15 +63,7 @@ body {
     position: absolute;
     bottom: 25%;
     left: 55%;
-    z-index: 2;
-}
-
-#drop2 {
-    width: 20px;
-    position: absolute;
-    bottom: 25%;
-    left: 55%;
-    z-index: 2;
+    z-index: 4;
 }
 
 
@@ -155,7 +151,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 70%;
-    z-index: -1;
+    z-index: 1;
 }
 
 
@@ -171,35 +167,24 @@ body {
     height: 50px;
     width: auto;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 #apple2 {
     height: 50px;
     width: auto;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 #apple3 {
     height: 50px;
     width: auto;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
 }
 
 #apple3:hover {
-    cursor: pointer;
-}
-
-#tree {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    z-index: -1;
-}
-
-#tree:hover {
     cursor: pointer;
 }
 
@@ -208,11 +193,11 @@ body {
     position: fixed;
     bottom: 20px;
     left: 5%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #basketfront {
-    z-index: 3;
+    z-index: 4;
 }
 
 body {
@@ -232,7 +217,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 5;
 }
 
 #baby_talking {

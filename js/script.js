@@ -3,7 +3,7 @@
 $(document).ready(function() {
     // Call to function
     randomMovement("#butterfly");
-    $('#butterfliesCaught').text("Butterflies caught: 0").css({ "font-weight": "bold", "font-size": "x-large", "font-family": "Calibri", "margin-left": "30px" });
+    $('#butterfliesCaught').text("Butterflies caught: 0").css({ "font-weight": "bold", "font-size": "x-large", "font-family": "Calibri", "margin-left": "30px", "z-index": "2", "position": "relative" });
 
 
     // Petra hid all baby butterflies
@@ -36,8 +36,8 @@ var oldX = 0;
 
 $(document).mousemove(function(e) {
     $("#net").css({
-        left: e.pageX,
-        top: e.pageY
+        left: e.pageX + 10,
+        top: e.pageY + 10
     });
 
     if (oldX < e.pageX) {
