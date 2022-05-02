@@ -18,9 +18,10 @@ $(document).ready(function() {
     $('#baby12').hide();
 });
 
+//Cedric added function for random movements
 function randomMovement(IdRef) {
-    var width = $(window).width() - $(IdRef).width(); //butterfly 300 wide
-    var height = $(window).height() - $(IdRef).height(); //butterfly 200 high
+    var width = $(window).width() - $(IdRef).width(); 
+    var height = $(window).height() - $(IdRef).height(); 
     var randomVertical = Math.random() * height;
     var randomHorizontal = Math.random() * width;
     $(IdRef).animate({ top: randomVertical }, 5000).animate({ left: randomHorizontal }, 5000, function() { randomMovement(IdRef) });
@@ -46,6 +47,7 @@ function flyAway(element) {
     setTimeout(function() { $(element).hide() }, 8000);
 }
 
+//Cedric added functionality that keeps track of butterflies being caught as well as some added text.
 var counter = 0;
 $("#butterfly").mouseenter(function() {
     counter++;
