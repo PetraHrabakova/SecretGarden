@@ -55,6 +55,14 @@ body {
     z-index: 2;
 }
 
+#drop2 {
+    width: 20px;
+    position: absolute;
+    bottom: 25%;
+    left: 55%;
+    z-index: 2;
+}
+
 
 /*text position*/
 
@@ -181,7 +189,7 @@ body {
     position: fixed;
     bottom: 20px;
     left: 50%;
-    z-index: 1;
+    z-index: -1;
 }
 
 #tree:hover {

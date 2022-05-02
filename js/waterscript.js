@@ -1,11 +1,5 @@
 //When the page is loaded this elements are always hidden
-$(document).ready(function() {
-    $('.waterdrop').hide();
-    $('.flower').hide();
-    $('.verysmall').hide();
-    $('#squirel').hide();
-    $('#talk_sq').hide();
-});
+
 
 
 //function for water drops id with a loop
@@ -62,6 +56,7 @@ $("#wateringcan").click(function() {
         $(".waterdrop").animate("fast", function() { downMovement2(".waterdrop") });
         $("#drop").animate("fast", function() { downMovement2("#drop") });
         $("#drop1").animate("fast", function() { downMovement("#drop1") });
+        $("#drop2").animate("fast", function() { downMovement("#drop2") });
 //also text changes when the can is tilted
         $("#talk").text("Please, please water me!I want to grow!");
         $("#talk_dirty").text("YES, come over here and make me wet !");

@@ -18,6 +18,13 @@ $(document).ready(function() {
     $('#baby10').hide();
     $('#baby11').hide();
     $('#baby12').hide();
+
+//Veronica hid all these
+    $('.waterdrop').hide();
+    $('.flower').hide();
+    $('.verysmall').hide();
+    $('#squirel').hide();
+    $('#talk_sq').hide();
 });
 
 //Cedric added function for random movements
