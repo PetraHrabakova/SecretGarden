@@ -6,21 +6,6 @@ let boxHeightY1 = (getTreePos().bottom - getTreePos().top) * 0.1425 + getTreePos
 let boxHeightY2 = (getTreePos().bottom - getTreePos().top) * 0.425 + getTreePos().top
 
 
-$(document).ready(function () {
-
-    $('#tree').click(function(){
-
-        alert("kzrva")
-
-
-
-    })
-
-
-
-
-})
-
 function getTreePos() {
     var treeTop = $('#tree').offset().top
     var treeLeft = $('#tree').offset().left
