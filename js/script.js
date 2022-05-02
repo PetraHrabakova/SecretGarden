@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('#butterfliesCaught').text("Butterflies caught: 0").css({ "font-weight": "bold", "font-size": "x-large", "font-family": "Calibri", "margin-left": "30px", "z-index": "2", "position": "relative" });
 
 
-    // Petra hid all baby butterflies
+    // Petra hid all baby butterflies - EXTRA functionality 
     $('#baby1').hide();
     $('#baby2').hide();
     $('#baby3').hide();
@@ -28,14 +28,14 @@ $(document).ready(function() {
     $('#talk_sq').hide();
 
     //Papp did this
-    
+
     let X1 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y1 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple1").animate({
         left: X1,
         top: Y1
     }, 1);
-    console.log(Y1,)
+    console.log(Y1, )
 
     let X2 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y2 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
@@ -44,20 +44,20 @@ $(document).ready(function() {
         top: Y2
     }, 1);
 
-    console.log(Y2,)
+    console.log(Y2, )
     let X3 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y3 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
     $("#apple3").animate({
         left: X3,
         top: Y3
     }, 1);
-    console.log(Y3,)
+    console.log(Y3, )
 });
 
 
 // Net
 // Petra made the net to follow the mouse cursor as well as to turn 
-// base on the cursor's direction
+// base on the cursor's direction - BASIC + EXTRA functionality
 var oldX = 0;
 
 $(document).mousemove(function(e) {
@@ -84,7 +84,7 @@ function randomMovement(IdRef) {
     $(IdRef).animate({ top: randomVertical }, 5000).animate({ left: randomHorizontal }, 5000, function() { randomMovement(IdRef) });
 };
 
-// Petra did this - function that moves baby butterflies 
+// Petra did this - function that moves baby butterflies - EXTRA functionality
 function moveBabyButterfly(element) {
     var width = $(window).width() - $(element).width(); // width = screen width - baby butterfly width
     var height = $(window).height() - $(element).height(); // same goes for height
@@ -94,7 +94,7 @@ function moveBabyButterfly(element) {
     $(element).animate({ "left": randomHorizontal, "top": randomVertical }, 5000, function() { moveBabyButterfly(element) });
 };
 
-// Petra did this - function that makes baby butterflies fly out of the screen and hide again
+// Petra did this - function that makes baby butterflies fly out of the screen and hide again - EXTRA functionality 
 function flyAway(element) {
     var newWidth = $(window).width() + $(element).width(); // location outside of the screen
     var newHeight = $(window).height() + $(element).height(); // location outside of the screen
@@ -107,7 +107,7 @@ function flyAway(element) {
 //Cedric added functionality that keeps track of butterflies being caught as well as some added text upon catching the butterfly a certain amount of times.
 var counter = 0;
 $("#butterfly").mouseenter(function() {
-    counter++;//
+    counter++; //
     if (counter >= 10 && counter < 25) {
         $('#butterfliesCaught').html("Butterflies caught: " + counter + " Please he has a family! Think of the children!");
         //Special function by Veronica, when butterfly is caught 10 times, the squirell & text appears
@@ -132,7 +132,7 @@ $("#butterfly").mouseenter(function() {
         // Petra added this - Wait 2 seconds after Papp gets killed to show baby butterflies 
         setTimeout(function() {
 
-            // Petra added small baby buttreflies
+            // Petra added small baby buttreflies - EXTRA functionality
             $('#baby1').show().css({ top: 50, left: 1700 });
             $('#baby2').show().css({ top: 100, left: -100 });
             $('#baby3').show().css({ top: 150, left: 1700 });
@@ -160,7 +160,7 @@ $("#butterfly").mouseenter(function() {
 
         }, 3000);
 
-        // Petra - wait 20 seconds till baby butterflies disappear again
+        // Petra - wait 20 seconds till baby butterflies disappear again - EXTRA functionality
         setTimeout(function() {
             flyAway("#baby1");
             flyAway("#baby2");
@@ -244,7 +244,7 @@ $("#wateringcan").click(function() {
         $(".waterdrop").animate("fast", function() { downMovement2(".waterdrop") });
         $("#drop").animate("fast", function() { downMovement2("#drop") });
         $("#drop1").animate("fast", function() { downMovement("#drop1") });
-        
+
         //also text changes when the can is tilted
         $("#talk").text("Please, please water me!I want to grow!");
         $("#talk_dirty").text("YES, come over here and make me wet !");
@@ -308,62 +308,54 @@ function getBasketPos() {
 
 
 
-    $("#apple1").click(function () {
+$("#apple1").click(function() {
 
-        $("#apple1").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 20,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
- });
-
-
-    $("#apple2").click(function () {
-
-        $("#apple2").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 2.75,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
-
-    $("#apple3").click(function () {
-        $("#apple3").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 1.5,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
-        }, 1000);
-    });
+    $("#apple1").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 20,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
 
+$("#apple2").click(function() {
 
+    $("#apple2").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 2.75,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
-    $("#tree").click(function () {
-        audio.play();
-
-
-        if ($("#apple1").offset().left > getBasketPos().top) {
-            $("#apple1").animate({ top: $('#tree').height() }, 9000);
-
-
-        }
-        if ($("#apple2").offset().left > getBasketPos().top) {
-            $("#apple2").animate({ top: $('#tree').height() }, 9000);
-
-        }
-        if ($("#apple3").offset().left > getBasketPos().top) {
-            $("#apple3").animate({ top: $('#tree').height() }, 9000);
-
-        }
-    });
+$("#apple3").click(function() {
+    $("#apple3").animate({
+        left: getBasketPos().left +
+            (getBasketPos().right - getBasketPos().left) / 1.5,
+        top: getBasketPos().top +
+            (getBasketPos().bottom - getBasketPos().top) / 1.75
+    }, 1000);
+});
 
 
 
 
+$("#tree").click(function() {
+    audio.play();
 
 
+    if ($("#apple1").offset().left > getBasketPos().top) {
+        $("#apple1").animate({ top: $('#tree').height() }, 9000);
 
 
+    }
+    if ($("#apple2").offset().left > getBasketPos().top) {
+        $("#apple2").animate({ top: $('#tree').height() }, 9000);
+
+    }
+    if ($("#apple3").offset().left > getBasketPos().top) {
+        $("#apple3").animate({ top: $('#tree').height() }, 9000);
+
+    }
+});
