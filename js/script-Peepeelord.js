@@ -29,8 +29,7 @@ function getBasketPos() {
 
 
 
-
-$(document).ready(function () {
+$(document).ready(function() {
 
     let X = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y1 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
@@ -38,10 +37,10 @@ $(document).ready(function () {
         left: X,
         top: Y1
     }, 1);
-    console.log(Y1,)
+    console.log(Y1, )
 })
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     let X = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y2 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
@@ -50,11 +49,11 @@ $(document).ready(function () {
         top: Y2
     }, 1);
 
-    console.log(Y2,)
+    console.log(Y2, )
 
 })
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     let X = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y3 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
@@ -62,41 +61,41 @@ $(document).ready(function () {
         left: X,
         top: Y3
     }, 1);
-    console.log(Y3,)
+    console.log(Y3, )
 
 })
 
-$(document).ready(function () {
-    $("#apple1").click(function () {
+$(document).ready(function() {
+    $("#apple1").click(function() {
 
         $("#apple1").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 20,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
+            left: getBasketPos().left +
+                (getBasketPos().right - getBasketPos().left) / 20,
+            top: getBasketPos().top +
+                (getBasketPos().bottom - getBasketPos().top) / 1.75
         }, 1000);
     });
 })
 
-$(document).ready(function () {
-    $("#apple2").click(function () {
+$(document).ready(function() {
+    $("#apple2").click(function() {
 
         $("#apple2").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 2.75,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
+            left: getBasketPos().left +
+                (getBasketPos().right - getBasketPos().left) / 2.75,
+            top: getBasketPos().top +
+                (getBasketPos().bottom - getBasketPos().top) / 1.75
         }, 1000);
     });
 })
 
-$(document).ready(function () {
-    $("#apple3").click(function () {
+$(document).ready(function() {
+    $("#apple3").click(function() {
         $("#apple3").animate({
-            left: getBasketPos().left
-                + (getBasketPos().right - getBasketPos().left) / 1.5,
-            top: getBasketPos().top
-                + (getBasketPos().bottom - getBasketPos().top) / 1.75
+            left: getBasketPos().left +
+                (getBasketPos().right - getBasketPos().left) / 1.5,
+            top: getBasketPos().top +
+                (getBasketPos().bottom - getBasketPos().top) / 1.75
         }, 1000);
     });
 })
@@ -105,9 +104,9 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     const audio = new Audio("images/whistle.mp3");
-    $("#tree").click(function () {
+    $("#tree").click(function() {
         audio.play();
 
 
