@@ -1,5 +1,21 @@
 //MAKE THE MAGIC HAPPEN
 //MAKE THE MAGIC HAPPEN
+
+
+//Papp's part
+
+/* 
+
+I have opened the tree image and measured precentage,
+where i wish to randomly appear the apples and then implemented it
+
+*/
+
+let boxWidthX1 = (getTreePos().right - getTreePos().left) * 0.1067 + getTreePos().left
+let boxWidthX2 = (getTreePos().right - getTreePos().left) * 0.884 + getTreePos().left
+let boxHeightY1 = (getTreePos().bottom - getTreePos().top) * 0.1425 + getTreePos().top
+let boxHeightY2 = (getTreePos().bottom - getTreePos().top) * 0.425 + getTreePos().top
+
 $(document).ready(function() {
     // Call to function
     randomMovement("#butterfly");
@@ -28,6 +44,8 @@ $(document).ready(function() {
     $('#talk_sq').hide();
 
     //Papp did this
+
+    //puts the apples on random coordinates in the measured part of the image
 
     let X1 = Math.floor(Math.random() * (boxWidthX2 - boxWidthX1)) + boxWidthX1 + 1
     let Y1 = Math.floor(Math.random() * (boxHeightY2 - boxHeightY1)) + boxHeightY1 + 1
@@ -273,15 +291,10 @@ $("#wateringcan").click(function() {
 //Veronicas part is done here
 
 //Papp's part
-
-let boxWidthX1 = (getTreePos().right - getTreePos().left) * 0.1067 + getTreePos().left
-let boxWidthX2 = (getTreePos().right - getTreePos().left) * 0.884 + getTreePos().left
-let boxHeightY1 = (getTreePos().bottom - getTreePos().top) * 0.1425 + getTreePos().top
-let boxHeightY2 = (getTreePos().bottom - getTreePos().top) * 0.425 + getTreePos().top
-
+//load audio
 const audio = new Audio("images/whistle.mp3");
 
-
+//functions to get the position of the tree
 function getTreePos() {
     var treeTop = $('#tree').offset().top
     var treeLeft = $('#tree').offset().left
@@ -291,7 +304,7 @@ function getTreePos() {
 
     return { top: treeTop, left: treeLeft, bottom: treeBottom, right: treeRight }
 }
-
+//same for the basket
 function getBasketPos() {
     var basketTop = $('.basket').offset().top
     var basketLeft = $('.basket').offset().left
@@ -305,7 +318,7 @@ function getBasketPos() {
 
 
 
-
+//implementing the function that moves the apples into the basket on click
 
 
 $("#apple1").click(function() {
@@ -339,7 +352,8 @@ $("#apple3").click(function() {
 });
 
 
-
+//Extra functionality "apples falling comedically slowly"
+//here i use the loaded audio on click
 
 $("#tree").click(function() {
     audio.play();
