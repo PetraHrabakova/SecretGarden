@@ -55,18 +55,20 @@ $("#butterfly").mouseenter(function() {
     counter++;
     if (counter >= 10 && counter < 25) {
         $('#butterfliesCaught').html("Butterflies caught: " + counter + " Please he has a family! Think of the children!");
+        //Special function by Veronica, when butterfly is caught 10 times, the squirell & text appears
         $('#squirel').show();
         $('#talk_sq').show();
 
 
     } else if (counter >= 25 && counter < 50) {
         $('#butterfliesCaught').html("Butterflies caught: " + counter + " You truly are a monster. Will I have to guilt trip you to make you stop?");
+         //here the squirell's text  hides
         $('#talk_sq').hide();
     } else if (counter >= 50) {
         $("#butterfly").hide();
         $('#butterfliesCaught').text("You've killed Papp the butterfly... I hope you're happy. He leaves behind a wife and 12 children");
-        //Veronica added this to make the game more dramatic
-        //When the butterfly dies, the flower dies with him
+         //Veronica added this to make the game more dramatic
+        //When the butterfly dies, the flower gets smaller, it's a special function
         $("#talk").text("You are heartless, I will die now (just kidding), goodbye Papp the butterfly");
         $(".flower_small").hide();
         $('.verysmall').show();
